@@ -154,7 +154,7 @@ if page == "Testing App":
                 if st.button("✅ Submit Task"):
                     output = io.BytesIO()
                     screenshots = screenshots if screenshots else []
-
+                    github_token = st.secrets["GITHUB_TOKEN"]
                     # Save results to in-memory Excel file
                     save_screenshots_to_excel(
                         excel_path=output,
@@ -164,7 +164,8 @@ if page == "Testing App":
                         tester_name=tester_name,
                         test_result=test_result,
                         comment=comment,
-                        screenshots=screenshots
+                        screenshots=screenshots,
+                        github_token
                     )
 
                     # Get raw bytes of the Excel file
