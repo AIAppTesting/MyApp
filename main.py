@@ -173,7 +173,7 @@ if page == "Testing App":
                     # Push to GitHub (before UI feedback)
                     if GITHUB_ENABLED and 'GITHUB_TOKEN' in st.secrets:
                         try:
-                            st.write("🔄 Pushing to GitHub...")
+                            st.write("🔄 Pushing to Excel...")
                             g = Github(st.secrets.GITHUB_TOKEN)
                             repo = g.get_repo(GITHUB_REPO)
                             contents = repo.get_contents(GITHUB_FILE)
@@ -183,7 +183,7 @@ if page == "Testing App":
                                 content=excel_bytes,
                                 sha=contents.sha
                             )
-                            st.success("✅ Updated GitHub successfully!")
+                            st.success("✅ Updated Excel successfully!")
                         except Exception as e:
                             st.warning(f"⚠️ GitHub update failed: {str(e)}")
 
