@@ -44,7 +44,7 @@ def insert_image(ws, img_bytes, row):
 
 
 
-def save_screenshots_to_excel(excel_path, df_main, wb, task_id, tester_name, test_result, comment, screenshots):
+def save_screenshots_to_excel(excel_path, df_main, wb, task_id, tester_name, test_result, comment, screenshots,github_token):
     def normalize_id(tid):
         return str(int(float(tid))) if float(tid).is_integer() else str(tid)
 
@@ -225,7 +225,7 @@ def save_screenshots_to_excel(excel_path, df_main, wb, task_id, tester_name, tes
         local_file_path="main_excel.xlsx",
         github_username="AIAppTesting",
         repo_name="MyApp",
-        github_token=st.secrets["GITHUB_TOKEN"],
+        github_token=github_token,
         repo_file_path="main_excel.xlsx"
     )
 
