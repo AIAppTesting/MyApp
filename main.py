@@ -198,9 +198,9 @@ if page == "Testing App":
                     )
 
                     st.balloons()
-                    time.sleep(1.5)
+                    time.sleep(10)
                     # Optional: rerun the app to refresh task list
-                    # st.rerun()
+                    st.rerun()
 
 
         else:
