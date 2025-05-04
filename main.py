@@ -90,9 +90,7 @@ if page == "Testing App":
     tester_tasks = df_main[df_main["Tester Name"] == tester_name].copy()
     tester_tasks["Normalized_ID"] = tester_tasks["Task ID"].apply(normalize_id)
     
-    # Debug output (can remove later)
-    st.sidebar.write("Debug - Task IDs:", tester_tasks["Task ID"].unique())
-    st.sidebar.write("Normalized IDs:", tester_tasks["Normalized_ID"].unique())
+   
 
     # Determine completed tasks
     completed_ids = df_main[df_main["Test Result"].notna()]["Task ID"].apply(normalize_id).tolist()
