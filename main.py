@@ -147,7 +147,7 @@ if page == "Testing App":
                     cols = st.columns(min(3, len(screenshots)))
                     for i, img_file in enumerate(screenshots):
                         with cols[i % 3]:
-                            st.image(Image.open(img_file), caption=img_file.name, use_column_width=True)
+                            st.image(Image.open(img_file), caption=img_file.name, use_container_width=True)
 
                 if st.button("✅ Submit Task"):
                     output = io.BytesIO()
