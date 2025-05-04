@@ -80,7 +80,7 @@ def plot_test_result_summary(df):
     st.pyplot(fig)
 
 if page == "Testing App":
-    st.title("🔪 Testing Documentation Tool")
+    st.title("🔍 Testing Documentation Tool")
 
     # Tester Selection
     tester_names = sorted(df_main["Tester Name"].dropna().unique())
