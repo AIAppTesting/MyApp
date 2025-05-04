@@ -1,4 +1,5 @@
 import streamlit as st
+st.set_page_config(page_title="Testing Tool", layout="wide")
 import pandas as pd
 from utils import load_excel_data, save_screenshots_to_excel
 from PIL import Image
@@ -17,7 +18,7 @@ except ImportError:
     st.warning("PyGithub not installed - GitHub updates disabled", icon="⚠️")
 
 # Page setup with custom theme (MUST BE FIRST STREAMLIT COMMAND)
-st.set_page_config(page_title="Testing Tool", layout="wide")
+
 st.markdown("""
     <style>
     .main { background-color: #f5f7fa; }
